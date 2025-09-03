@@ -1,24 +1,13 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
 
 document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
+  <div class="invitation">
+    <marquee behavior="alternate" scrollamount="8">
+      <span class="title">You're Invited!</span>
+    </marquee>
+    <p class="time">Party starts at <span class="highlight">7:00 PM</span></p>
+    <p class="address">10578 S Ozarks Drive<br/>South Jordan, Utah</p>
+    <p class="food">Food and drinks provided</p>
+    <p class="gifts">Please no gifts</p>
   </div>
-`
-
-setupCounter(document.querySelector('#counter'))
+`;
