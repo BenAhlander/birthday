@@ -3,7 +3,8 @@ const toolbox = document.getElementById('toolbox');
 
 if (menuToggle && toolbox) {
   menuToggle.addEventListener('click', () => {
-    toolbox.classList.toggle('open');
+    const open = toolbox.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', open);
   });
 }
 

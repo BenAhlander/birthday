@@ -1,13 +1,11 @@
 :root{
-  /* Paint-ish palette */
-  --ink:#111; --bg:#F2F2F2; --panel:#FFFFFF; --panel-2:#E8E8E8;
-  --red:#FF1A1A; --green:#22B14C; --blue:#00A2E8; --yellow:#FFC90E; --magenta:#A349A4; --cyan:#3F48CC;
-  --chrome-grad: linear-gradient(#2B78E4, #1C5FB8);
-  --r:14px; --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-6:24px;
-  --shadow-bevel: inset 0 1px #fff, inset 0 -1px #C9C9C9, 0 2px 0 #B5B5B5, 0 4px 0 #8E8E8E;
-  --shadow-chrome: inset 0 1px rgba(255,255,255,.6), 0 1px rgba(0,0,0,.25);
-  --speed-fast:140ms; --ease:cubic-bezier(.2,.6,.2,1);
+  --ink:#111; --bg:#F4F6FA; --panel:#FFFFFF; --panel-2:#E9ECF3;
+  /* Y2K brights (MS Paint-esque) */
+  --c-red:#FF1A1A; --c-green:#22B14C; --c-blue:#00A2E8; --c-yellow:#FFC90E; --c-magenta:#A349A4; --c-cyan:#3F48CC;
+  --chrome:linear-gradient(180deg,#2B78E4 0%,#1C5FB8 100%);
+  --r:16px; --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-6:24px; --space-8:32px;
+  --shadow-bevel:inset 0 1px #fff, inset 0 -1px #C9C9C9, 0 2px 0 #B5B5B5, 0 4px 0 #8E8E8E;
+  --shadow-chrome:inset 0 1px rgba(255,255,255,.6), 0 1px rgba(0,0,0,.25);
+  --speed:140ms; --ease:cubic-bezier(.2,.6,.2,1);
 }
-@media (prefers-reduced-motion: reduce){
-  :root{ --speed-fast:0ms; }
-}
+@media (prefers-reduced-motion: reduce){:root{--speed:0ms;}}
