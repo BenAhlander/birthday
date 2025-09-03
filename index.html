@@ -6,11 +6,11 @@
     <title>Ben's 30th Birthday</title>
     <link rel="stylesheet" href="/src/styles/components.css" />
   </head>
-  <body>
+  <body class="checker">
     <div class="window bevel">
       <header class="titlebar chrome">
         <div class="row" style="align-items:center;">
-          <button id="menu-toggle" aria-label="Toggle toolbox">☰</button>
+          <button id="menu-toggle" aria-label="Toggle toolbox" aria-expanded="false">☰</button>
           <h1 class="title-sheen">Ben's 30th Birthday</h1>
         </div>
         <div class="controls" aria-hidden="true">
@@ -22,28 +22,34 @@
           <a class="btn" href="#games">Games</a>
           <a class="btn" href="#food">Food & Drinks</a>
           <a class="btn" href="#details">Details</a>
-          <a class="btn" href="mailto:ben@example.com?subject=RSVP%20Ben%27s%2030th">RSVP</a>
+          <a class="btn" href="#rsvp">RSVP</a>
         </nav>
         <main class="canvas">
           <section class="window-card bevel" id="hero">
             <h2>Ben's 30th Birthday Party</h2>
+            <p>Hey friend! I'm turning the big 3-0 and would love for you to help kick off a totally radical new decade. We're dialing back to the era of AIM away messages and couch co-op marathons, so dust off your inner LAN-party self and get ready to mash some buttons.</p>
+            <p class="marquee" aria-hidden="true"><span>Early 2000s vibes • Low-res glory • Pixel-perfect memories • </span></p>
             <p><strong>Date & Time:</strong> Oct 4, 7:00 PM</p>
             <p><strong>Address:</strong> 10578 S Ozarks Drive</p>
             <p><strong>Theme:</strong> Early 2000s nostalgia – old Nintendo & old Xbox, food & drinks.</p>
-            <p><em>No gifts, please.</em></p>
-            <p><a class="btn" href="mailto:ben@example.com?subject=RSVP%20Ben%27s%2030th">RSVP</a></p>
           </section>
           <section class="window-card bevel" id="games">
-            <h2>Games</h2>
-            <p>Relive classics on original Nintendo and Xbox consoles.</p>
+            <h2>Games & Vibes</h2>
+            <p>We're hooking up the classics: N64 showdowns, Halo LAN battles, and maybe a surprise mini-challenge or two. Bragging rights will be tracked on a tiny whiteboard—feel free to chase the top score or just vibe on the menu screens.</p>
           </section>
           <section class="window-card bevel" id="food">
             <h2>Food & Drinks</h2>
-            <p>Fuel up with throwback snacks and plenty of beverages.</p>
+            <p>Expect throwback snacks, fizzy drinks, and enough pizza rolls to fuel a four-hour raid.</p>
           </section>
           <section class="window-card bevel" id="details">
-            <h2>Details</h2>
-            <p>Parking available on the street. Reach out if you need special accommodations.</p>
+            <h2>Details & FAQ</h2>
+            <p>We'll kick off at 7:00 PM on Oct 4 at 10578 S Ozarks Drive. Street parking is wide open—just follow the glow from the living room and come on in. Need a hand with directions or access? Give me a shout.</p>
+            <p><em>No gifts, please—your high score is present enough.</em></p>
+          </section>
+          <section class="window-card bevel" id="rsvp">
+            <h2>RSVP</h2>
+            <p>Let me know you're in so I can stock the right amount of nachos. A quick message is perfect, and feel free to bring a friend who still remembers blowing on cartridges.</p>
+            <p><a class="btn btn-primary" href="mailto:ben@example.com?subject=RSVP%20Ben%27s%2030th">Click here to RSVP</a></p>
           </section>
         </main>
       </div>
