@@ -9,3 +9,7 @@
   --speed:140ms; --ease:cubic-bezier(.2,.6,.2,1);
 }
 @media (prefers-reduced-motion: reduce){:root{--speed:0ms;}}
+
+  --shadow-bevel-pressed: inset 0 1px #8E8E8E, inset 0 -1px #fff, 0 1px 0 #B5B5B5;
+
+  --shadow-window: 0 8px 16px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2);

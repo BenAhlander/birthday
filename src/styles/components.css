@@ -46,3 +46,587 @@ body{min-height:100vh;display:flex;flex-direction:column;}
 @media (prefers-reduced-motion: reduce){
   .title-sheen::after,.status-bar,.btn-primary,.marquee span{animation:none;}
 }
+
+/* Enhanced Button Hover Effects */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    inset 0 1px #fff,
+    inset 0 -1px #C9C9C9,
+    0 3px 0 #B5B5B5,
+    0 6px 0 #8E8E8E,
+    0 2px 8px rgba(0,0,0,0.15);
+}
+
+.btn:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: buttonShine 0.6s ease-out;
+}
+
+@keyframes buttonShine {
+  to {
+    left: 100%;
+  }
+}
+
+/* Primary button special hover */
+.btn-primary:hover {
+  background: #FFD700;
+  box-shadow: 
+    inset 0 1px #fff,
+    inset 0 -1px #E6C200,
+    0 3px 0 #CC9900,
+    0 6px 0 #B38600,
+    0 0 16px rgba(255, 201, 14, 0.4);
+}
+
+/* Window control buttons hover */
+.controls button:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.controls button:active {
+  transform: scale(0.95);
+  box-shadow: var(--shadow-bevel-pressed);
+}
+
+/* Menu toggle button hover */
+#menu-toggle:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+#menu-toggle:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-bevel-pressed);
+}
+
+/* Toolbox navigation buttons */
+.toolbox .btn:hover {
+  background: #f8f8f8;
+  border-left: 3px solid var(--c-blue);
+  padding-left: calc(var(--space-4) - 3px);
+}
+
+/* RSVP button special effects */
+#rsvp .btn-primary:hover {
+  animation: rsvpPulse 0.8s ease-in-out;
+}
+
+@keyframes rsvpPulse {
+  0%, 100% { transform: translateY(-1px) scale(1); }
+  50% { transform: translateY(-2px) scale(1.02); }
+}
+
+/* Focus states for accessibility */
+.btn:focus-visible,
+.controls button:focus-visible,
+#menu-toggle:focus-visible {
+  outline: 2px solid var(--c-blue);
+  outline-offset: 2px;
+  box-shadow: 
+    var(--shadow-bevel),
+    0 0 0 4px rgba(0, 162, 232, 0.2);
+}
+
+/* Disable hover effects for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover,
+  .controls button:hover,
+  #menu-toggle:hover {
+    transform: none;
+  }
+  
+  .btn:hover::before,
+  .btn-primary:hover,
+  #rsvp .btn-primary:hover {
+    animation: none;
+  }
+  
+  .toolbox .btn:hover {
+    border-left: none;
+    padding-left: var(--space-4);
+  }
+}
+
+/* Enhanced Button Hover Effects */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    inset 0 1px #fff,
+    inset 0 -1px #C9C9C9,
+    0 3px 0 #B5B5B5,
+    0 6px 0 #8E8E8E,
+    0 2px 8px rgba(0,0,0,0.15);
+}
+
+.btn:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: buttonShine 0.6s ease-out;
+}
+
+@keyframes buttonShine {
+  to {
+    left: 100%;
+  }
+}
+
+/* Primary button special hover */
+.btn-primary:hover {
+  background: #FFD700;
+  box-shadow: 
+    inset 0 1px #fff,
+    inset 0 -1px #E6C200,
+    0 3px 0 #CC9900,
+    0 6px 0 #B38600,
+    0 0 16px rgba(255, 201, 14, 0.4);
+}
+
+/* Window control buttons hover */
+.controls button:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.controls button:active {
+  transform: scale(0.95);
+  box-shadow: var(--shadow-bevel-pressed);
+}
+
+/* Menu toggle button hover */
+#menu-toggle:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+#menu-toggle:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-bevel-pressed);
+}
+
+/* Toolbox navigation buttons */
+.toolbox .btn:hover {
+  background: #f8f8f8;
+  border-left: 3px solid var(--c-blue);
+  padding-left: calc(var(--space-4) - 3px);
+}
+
+/* RSVP button special effects */
+#rsvp .btn-primary:hover {
+  animation: rsvpPulse 0.8s ease-in-out;
+}
+
+@keyframes rsvpPulse {
+  0%, 100% { transform: translateY(-1px) scale(1); }
+  50% { transform: translateY(-2px) scale(1.02); }
+}
+
+/* Focus states for accessibility */
+.btn:focus-visible,
+.controls button:focus-visible,
+#menu-toggle:focus-visible {
+  outline: 2px solid var(--c-blue);
+  outline-offset: 2px;
+  box-shadow: 
+    var(--shadow-bevel),
+    0 0 0 4px rgba(0, 162, 232, 0.2);
+}
+
+/* Disable hover effects for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover,
+  .controls button:hover,
+  #menu-toggle:hover {
+    transform: none;
+  }
+  
+  .btn:hover::before,
+  .btn-primary:hover,
+  #rsvp .btn-primary:hover {
+    animation: none;
+  }
+  
+  .toolbox .btn:hover {
+    border-left: none;
+    padding-left: var(--space-4);
+  }
+}
+
+/* Balloons Animation */
+.balloons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.balloon {
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: floatUp 8s ease-out forwards;
+  opacity: 0;
+}
+
+.balloon::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: #333;
+}
+
+.balloon.red { background: #ff4444; }
+.balloon.blue { background: #4444ff; }
+.balloon.green { background: #44ff44; }
+.balloon.yellow { background: #ffff44; }
+.balloon.purple { background: #ff44ff; }
+.balloon.orange { background: #ff8844; }
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Fireworks Animation */
+.fireworks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.firework {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  animation: explode 2s ease-out forwards;
+}
+
+.firework.red { background: #ff4444; }
+.firework.blue { background: #4444ff; }
+.firework.green { background: #44ff44; }
+.firework.yellow { background: #ffff44; }
+.firework.purple { background: #ff44ff; }
+.firework.orange { background: #ff8844; }
+.firework.white { background: #ffffff; }
+
+@keyframes explode {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* Confetti Animation */
+.confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 998;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  animation: confettiFall 3s ease-out forwards;
+}
+
+.confetti-piece.red { background: #ff4444; }
+.confetti-piece.blue { background: #4444ff; }
+.confetti-piece.green { background: #44ff44; }
+.confetti-piece.yellow { background: #ffff44; }
+.confetti-piece.purple { background: #ff44ff; }
+.confetti-piece.orange { background: #ff8844; }
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Welcome Message Animation */
+.welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--panel);
+  padding: var(--space-6);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-window);
+  z-index: 1001;
+  text-align: center;
+  animation: welcomeIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+.welcome-message h2 {
+  color: var(--c-blue);
+  margin: 0 0 var(--space-3);
+  font-size: 2rem;
+}
+
+.welcome-message p {
+  margin: 0;
+  color: var(--ink);
+}
+
+@keyframes welcomeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Disable animations for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .balloons,
+  .fireworks,
+  .confetti,
+  .welcome-message {
+    display: none;
+  }
+}
+
+/* Balloons Animation */
+.balloons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.balloon {
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: floatUp 8s ease-out forwards;
+  opacity: 0;
+}
+
+.balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: #333;
+}
+
+.balloon.red { background: #ff4444; }
+.balloon.blue { background: #4444ff; }
+.balloon.green { background: #44ff44; }
+.balloon.yellow { background: #ffff44; }
+.balloon.purple { background: #ff44ff; }
+.balloon.orange { background: #ff8844; }
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Fireworks Animation */
+.fireworks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.firework {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  animation: explode 2s ease-out forwards;
+}
+
+.firework.red { background: #ff4444; }
+.firework.blue { background: #4444ff; }
+.firework.green { background: #44ff44; }
+.firework.yellow { background: #ffff44; }
+.firework.purple { background: #ff44ff; }
+.firework.orange { background: #ff8844; }
+.firework.white { background: #ffffff; }
+
+@keyframes explode {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* Confetti Animation */
+.confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 998;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  animation: confettiFall 3s ease-out forwards;
+}
+
+.confetti-piece.red { background: #ff4444; }
+.confetti-piece.blue { background: #4444ff; }
+.confetti-piece.green { background: #44ff44; }
+.confetti-piece.yellow { background: #ffff44; }
+.confetti-piece.purple { background: #ff44ff; }
+.confetti-piece.orange { background: #ff8844; }
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Welcome Message Animation */
+.welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--panel);
+  padding: var(--space-6);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-window);
+  z-index: 1001;
+  text-align: center;
+  animation: welcomeIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+.welcome-message h2 {
+  color: var(--c-blue);
+  margin: 0 0 var(--space-3);
+  font-size: 2rem;
+}
+
+.welcome-message p {
+  margin: 0;
+  color: var(--ink);
+}
+
+@keyframes welcomeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Disable animations for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .balloons,
+  .fireworks,
+  .confetti,
+  .welcome-message {
+    display: none;
+  }
+}
