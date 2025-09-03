@@ -3,10 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Birthday Bash 2000!</title>
+    <title>Ben's 30th Birthday</title>
+    <link rel="stylesheet" href="/src/styles/components.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="window bevel">
+      <header class="titlebar chrome">
+        <div class="row" style="align-items:center;">
+          <button id="menu-toggle" aria-label="Toggle toolbox">☰</button>
+          <h1 class="title-sheen">Ben's 30th Birthday</h1>
+        </div>
+        <div class="controls" aria-hidden="true">
+          <button><img src="/src/assets/icons/min.svg" alt="" /></button><button><img src="/src/assets/icons/max.svg" alt="" /></button><button><img src="/src/assets/icons/close.svg" alt="" /></button>
+        </div>
+      </header>
+      <div class="main">
+        <nav class="toolbox" id="toolbox" aria-label="Toolbox">
+          <a class="btn" href="#games">Games</a>
+          <a class="btn" href="#food">Food & Drinks</a>
+          <a class="btn" href="#details">Details</a>
+          <a class="btn" href="mailto:ben@example.com?subject=RSVP%20Ben%27s%2030th">RSVP</a>
+        </nav>
+        <main class="canvas">
+          <section class="window-card bevel" id="hero">
+            <h2>Ben's 30th Birthday Party</h2>
+            <p><strong>Date & Time:</strong> Oct 4, 7:00 PM</p>
+            <p><strong>Address:</strong> 10578 S Ozarks Drive</p>
+            <p><strong>Theme:</strong> Early 2000s nostalgia – old Nintendo & old Xbox, food & drinks.</p>
+            <p><em>No gifts, please.</em></p>
+            <p><a class="btn" href="mailto:ben@example.com?subject=RSVP%20Ben%27s%2030th">RSVP</a></p>
+          </section>
+          <section class="window-card bevel" id="games">
+            <h2>Games</h2>
+            <p>Relive classics on original Nintendo and Xbox consoles.</p>
+          </section>
+          <section class="window-card bevel" id="food">
+            <h2>Food & Drinks</h2>
+            <p>Fuel up with throwback snacks and plenty of beverages.</p>
+          </section>
+          <section class="window-card bevel" id="details">
+            <h2>Details</h2>
+            <p>Parking available on the street. Reach out if you need special accommodations.</p>
+          </section>
+        </main>
+      </div>
+      <footer class="status-bar chrome" role="contentinfo">No gifts, please.</footer>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
